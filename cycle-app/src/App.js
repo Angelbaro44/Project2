@@ -1,28 +1,47 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {BrowserRouter,Link,Switch} from 'react-router-dom';
+import {Link, Switch, Route } from 'react-router-dom';
 import axios from 'axios';
-import './Home';
-import './Motorcyle';
-import './Cigar';
-import './Trips';
+import Home from './Home';
+import Motorcycle from './Motorcycle';
+import Cigar from './Cigar';
+import Trips from './Trips';
 
 function App() {
   return (
- <head></head>
+    <>
+      <header>
+        <nav>
 
- <header></header>
+          <section>
+            <Link to='/'>Home</Link>
+          </section>
+          <section>
+            <Link to='/motorcycles'>Motorcyle</Link>
+            <Link to='/cigars'>Cigar</Link>
+            <Link to='/trips'>Trips</Link>
+          </section>
 
-<div>
-  <div>   <button>   <img src=''  alt=''/>   </button>   </div>
-  <div>   <button>   <img src=''  alt=''/>   </button>   </div>
-  <div>   <button>   <img src=''  alt=''/>   </button>   </div>
-</div>
-<div></div>
 
-<footer></footer>
+        </nav>
+      </header>
 
+      {/* <div>   <button>  M <img src='' alt='' />   </button>   </div> */}
+      <div>
+        
+          <Switch>
+            <Route exact path='/' component={(props) => <Home {...props} />}/> 
+            <Route exact path='/motorcycles' component={(props) => <Motorcycle {...props} />}/> 
+            <Route exact path='/cigars' component={(props) => <Cigar {...props} />}/> 
+            <Route exact path='/trips' component={(props) => <Trips {...props} />}/> 
+          </Switch>
+        
+      </div>
+      <div></div>
+
+      <footer></footer>
+    </>
 
 
 
