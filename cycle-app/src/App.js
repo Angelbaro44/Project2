@@ -42,7 +42,7 @@ class App extends React.Component {
   getReddit = async () => { 
      //let key = await this.getAssesAToken();
      //console.log(key)
-    fetch("https://oauth.reddit.com/api/v1/me", {
+    fetch("https://oauth.reddit.com/r/motorcycles/hot/", {
       headers: { Authorization: `bearer ${await this.getAssesAToken()}`}
     }).then(res=>res.json()).then(res => {console.log(res)})
   
