@@ -26,7 +26,7 @@ html{
 }
 .nav{
   display: flex;
-    width: 100vw;
+    width: 100%;
     justify-content: space-between;
     margin-left: 20px;
     padding-left: 10px;
@@ -63,8 +63,6 @@ font-size: larger;
 
 /* App.js && Home.js Styles*/
 .daddyDiv{
-  margin: 10px;
-  padding:10px;
   width: 100vw ;
   display: flex;
   align-items: center;
@@ -87,8 +85,8 @@ font-size: larger;
 
 }
 .homeButtonCycle{
-  width: 30vw;
-  height: 25vw;
+  width: 30%;
+  height: 25%;
   margin: 20px;
   background-image: url(/images/3332921-0-11106071.jpg);
   background-size: cover;
@@ -97,8 +95,8 @@ font-size: larger;
 
 }
 .homeButtonCigar{
-  width: 30vw;
-  height: 25vw;
+  width: 30%;
+  height: 25%;
   margin: 20px;
   background-image: url(/images/ashton-collection-hero-mobile.jpg);
   background-size: cover;
@@ -107,8 +105,8 @@ font-size: larger;
 
 }
 .homeButtonTrips{
-  width: 60vw;
-  height: 15vw;
+  width: 60%;
+  height: 15%;
   margin: 20px;
   background-image: url(/images/Best-Motorcycle-Roads-1087x725.jpg);
   background-size: cover;
@@ -125,18 +123,34 @@ font-size: larger;
 
 
 /* Motorcycle.js reddit slider Styles */
+.redditDivGrandpa{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+  height: 100vh;
+}
+.redditH1Tittle{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  background: #00121be5;
+  border: 2px solid rgba(0, 139, 139, 0.418);
+  color: cornsilk;
+  width: 80%;
+}
 .redditDivDaddy{
    display: flex;
    background: #00121be5;
    border: 10px groove  #00121be5;
 margin:20px;
-margin-top: 10vh;
 overflow-y: scroll;
 overflow-x: hidden;
-width: 80vw;
-height: 100vh;
+width: 100%;
+height: 100%;
 flex-direction: column;
 color: cornsilk;
+
 }
 .redditContent{
   display: flex;
@@ -144,7 +158,7 @@ color: cornsilk;
   align-items: center;
   padding: 10px;
   margin: 20px;
-  margin-top: 10vh;
+  margin-top: 10%;
   color: cornsilk;
 
   background-color: rgba(0, 0, 0, 0.418);
@@ -168,6 +182,7 @@ width: 80px;
 	background: #00121be5;
   padding: 10px;
   color: cornsilk;
+  text-decoration: none;
 
 }
 .redditBodyImg{
@@ -193,31 +208,9 @@ width:850px;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* FOOTER */
 .footer {
-	width: 100%;
+	width: 100vw;
 	background: #00121be5;
     display: block;
     border: 2px solid rgba(0, 139, 139, 0.418);
@@ -255,9 +248,9 @@ width:850px;
 .border1 {
 	height: 3px;
 	width: 40px;
-	background: #ff9800;
-	color: #ff9800;
-	background-color: #ff9800;
+	background:  rgba(0, 139, 139, 0.418);
+	color:  rgba(0, 139, 139, 0.418);
+	background-color:  rgba(0, 139, 139, 0.418);
 	border: 0px;
 }
 
@@ -276,7 +269,7 @@ ul a {
 }
 
 ul a:hover {
-	color: #ff9800;
+	color: rgba(0, 139, 139, 0.418);
 }
 
 ul li {

@@ -42,7 +42,6 @@ class MotorcycleReddit extends Component {
                   
                   })
             })
-
       }
 
       displayterms = () => {
@@ -51,14 +50,14 @@ class MotorcycleReddit extends Component {
                         // console.log(count.data.url)
                         return (
 
-                             <section className='redditContent'>
-                                   <section className='redditHeader'>
+                             <div className='redditContent'>
+                                   <div className='redditHeader'>
                                          <img className='redditHeaderLogo'src='/images/icon.png' alt='Reddit Logo' />
                                          <a href='https://www.reddit.com/r/Harley/' className='redditHeaderUsername'>{count.data.author}</a>
-                                         </section>
+                                         </div>
                                    <img className='redditBodyImg' src={count.data.url} alt={count.data.author} />
                                    <p className='redditBodyText'>{count.data.title}</p>
-                             </section>
+                             </div>
 
                         )
                   })
@@ -69,10 +68,14 @@ class MotorcycleReddit extends Component {
             // this.displayterms()
             // console.log(this.state)
             return (
-                  <div className='redditDivDaddy'>
-                        {this.displayterms()}
 
-                  </div>
+                 <div className='redditDivGrandpa'>
+                        <h1 className='redditH1Tittle'>Community's Hotest Posts Today</h1>
+                        <div className='redditDivDaddy'>
+                              {this.displayterms()}
+      
+                        </div>
+                 </div>
             );
       }
 }

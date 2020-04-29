@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class CigarReddit extends Component {
+class TripsReddit extends Component {
       componentDidMount = () => {
             this.getReddit()
 
@@ -82,4 +82,4 @@ class CigarReddit extends Component {
       }
 }
 
-export default CigarReddit;
+export default TripsReddit;
