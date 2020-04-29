@@ -33,7 +33,7 @@ class TripsReddit extends Component {
 
             //let key = await this.getAssesAToken();
             //console.log(key)
-            fetch("https://oauth.reddit.com/r/cigars/top?limit=5", {
+            fetch("https://oauth.reddit.com/r/motorcyclesroadtrip/hot?limit=5", {
                   headers: { Authorization: `bearer ${await this.getAssesAToken()}` }
 
             }).then(res => res.json()).then(res => {
@@ -71,13 +71,13 @@ class TripsReddit extends Component {
             // this.displayterms()
             // console.log(this.state)
             return (
-                  <React.Fragment>
+                  <div className='redditDivGrandpa' >
                         <h1 className='redditH1Tittle'>Community's Hotest Posts Today</h1>
                         <div className='redditDivDaddy'>
                               {this.displayterms()}
 
                         </div>
-                  </React.Fragment>
+                  </div >
             );
       }
 }

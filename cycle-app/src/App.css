@@ -85,8 +85,8 @@ font-size: larger;
 
 }
 .homeButtonCycle{
-  width: 30%;
-  height: 25%;
+  width: 30vw;
+  height: 25vw;
   margin: 20px;
   background-image: url(/images/3332921-0-11106071.jpg);
   background-size: cover;
@@ -95,8 +95,8 @@ font-size: larger;
 
 }
 .homeButtonCigar{
-  width: 30%;
-  height: 25%;
+  width: 30vw;
+  height: 25vw;
   margin: 20px;
   background-image: url(/images/ashton-collection-hero-mobile.jpg);
   background-size: cover;
@@ -105,8 +105,8 @@ font-size: larger;
 
 }
 .homeButtonTrips{
-  width: 60%;
-  height: 15%;
+  width: 60vw;
+  height: 15vh;
   margin: 20px;
   background-image: url(/images/Best-Motorcycle-Roads-1087x725.jpg);
   background-size: cover;
