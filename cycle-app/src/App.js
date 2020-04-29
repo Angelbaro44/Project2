@@ -20,12 +20,12 @@ class App extends React.Component {
             <nav className='nav'>
 
               <section className='navSectionHome'>
-                <Link to='/'>Home</Link>
+                <Link className='navLinks' to='/'>Home</Link>
               </section>
               <section className='navSectionThreeLinks'>
-                <Link to='/motorcycles'>Motorcyle</Link>
-                <Link to='/cigars'>Cigar</Link>
-                <Link to='/trips'>Trips</Link>
+                <Link className='navLinks' to='/motorcycles'>Motorcyle</Link>
+                <Link className='navLinks' to='/cigars'>Cigar</Link>
+                <Link className='navLinks' to='/trips'>Trips</Link>
               </section>
 
 

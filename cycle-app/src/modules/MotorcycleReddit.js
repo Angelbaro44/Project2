@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class RedditComponent extends Component {
+class MotorcycleReddit extends Component {
       componentDidMount = () => {
             this.getReddit()
 
@@ -23,7 +23,6 @@ class RedditComponent extends Component {
                   method: "POST"
             })
             let key = await res.json()
-            console.log(key)
             return key.access_token
 
       }
@@ -33,7 +32,7 @@ class RedditComponent extends Component {
 
             //let key = await this.getAssesAToken();
             //console.log(key)
-            fetch("https://oauth.reddit.com/r/motorcycles/hot?limit=", {
+            fetch("https://oauth.reddit.com/r/Harley/top?limit=5", {
                   headers: { Authorization: `bearer ${await this.getAssesAToken()}` }
 
             }).then(res => res.json()).then(res => {
@@ -49,15 +48,16 @@ class RedditComponent extends Component {
       displayterms = () => {
             return (
                   this.state.res.map((count) => {
+                        // console.log(count.data.url)
                         return (
 
-                             <section>
-                                   <section>
-                                         <img src='/images/icon.png' alt='Reddit Logo' />
-                                         <p>{count.data.author}</p>
+                             <section className='redditContent'>
+                                   <section className='redditHeader'>
+                                         <img className='redditHeaderLogo'src='/images/icon.png' alt='Reddit Logo' />
+                                         <a href='https://www.reddit.com/r/Harley/' className='redditHeaderUsername'>{count.data.author}</a>
                                          </section>
-                                   <img src='{count.data.url}' alt='{count.data.author}' />
-                                   <p>{count.data.title}</p>
+                                   <img className='redditBodyImg' src={count.data.url} alt={count.data.author} />
+                                   <p className='redditBodyText'>{count.data.title}</p>
                              </section>
 
                         )
@@ -66,11 +66,10 @@ class RedditComponent extends Component {
       }
 
       render() {
-            this.getReddit()
             // this.displayterms()
-            console.log(this.state)
+            // console.log(this.state)
             return (
-                  <div>
+                  <div className='redditDivDaddy'>
                         {this.displayterms()}
 
                   </div>
@@ -78,4 +77,4 @@ class RedditComponent extends Component {
       }
 }
 
-export default RedditComponent;
+export default MotorcycleReddit;
