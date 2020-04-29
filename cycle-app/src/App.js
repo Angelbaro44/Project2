@@ -2,7 +2,6 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Link, Switch, Route } from 'react-router-dom';
-import axios from 'axios';
 import Home from './pages/Home';
 import Motorcycle from './pages/Motorcycle';
 import Cigar from './pages/Cigar';
