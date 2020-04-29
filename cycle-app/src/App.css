@@ -9,6 +9,31 @@ html{
   background-position: contain;
 }
 
+.navHeader{
+  display: flex;
+  width: 100vw;
+  height: 10vh;
+  background-color: rgb(15, 15, 15);
+  align-items: center;
+}
+.nav{
+  display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    margin-left: 20px;
+    padding-left: 10px;
+    margin-right: 20px;
+    padding-right: 10px;
+    color: cornsilk;
+    
+
+}
+.navSectionHome{
+
+}
+.navSectionThreeLinks{
+
+}
 .daddyDiv{
   margin: 10px;
   padding:10px;
@@ -17,28 +42,164 @@ html{
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
 }
 .homeButtonGroup{
   background-color: rgba(0, 0, 0, 0.452);
   max-width: 70vw;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+}
+.homeButtonGroupOfFirstTwoBottons{
+  flex-direction: row;
+  display: flex;
+  
 
 }
 .homeButtonCycle{
   width: 30vw;
   height: 25vw;
   margin: 20px;
+  background-image: url(/images/3332921-0-11106071.jpg);
+  background-size: cover;
 
 }
 .homeButtonCigar{
   width: 30vw;
   height: 25vw;
   margin: 20px;
+  background-image: url(/images/ashton-collection-hero-mobile.jpg);
+  background-size: cover;
 
 }
 .homeButtonTrips{
-  width: 30vw;
-  height: 25vw;
+  width: 60vw;
+  height: 15vw;
   margin: 20px;
+  background-image: url(/images/Best-Motorcycle-Roads-1087x725.jpg);
+  background-size: cover;
 
+}
+/* FOOTER */
+.footer {
+	width: 100%;
+	background: #00121b;
+    display: block;
+ }
+
+ .inner-footer {
+	 width: 95%;
+	 margin: auto;
+	 padding: 30px 10px;
+	 display: flex;
+	 flex-wrap: wrap;
+	 box-sizing: border-box;
+	 justify-content: center;
+ }
+
+.footer-items {
+	width: 25%;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	color: #fff;
+}
+
+.footer-items p {
+	font-size: 16px;
+	text-align: justify;
+	line-height: 25px;
+	color: #fff;
+}
+
+.footer-items h1 {
+	color: #fff;
+}
+
+.border1 {
+	height: 3px;
+	width: 40px;
+	background: #ff9800;
+	color: #ff9800;
+	background-color: #ff9800;
+	border: 0px;
+}
+
+ul {
+	list-style: none;
+	color: #fff;
+	font-size: 15px;
+	letter-spacing: 0.5px;	
+ }
+
+ul a {
+	text-decoration: none;
+	outline: none;
+	color: #fff;
+	transition: 0.3s;
+}
+
+ul a:hover {
+	color: #ff9800;
+}
+
+ul li {
+	margin: 10px 0;
+	height: 25px;
+}
+
+li i {
+	margin-right: 20px;
+}
+
+.social-media {
+	width: 100%;
+	color: #fff;
+	text-align: center;
+	font-size: 20px;
+}
+
+.social-media a {
+	text-decoration: none;
+}
+
+.social-media i {
+	height: 25px;
+	width: 25px;
+	margin: 20px 10px;
+	padding: 4px;
+	color: #fff;
+	transition: 0.5s;
+}
+
+.social-media i:hover {
+	transform: scale(1.5);
+}
+
+.footer-bottom {
+	padding: 10px;
+	background: #00121b;
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+}
+
+/* for tablet mode view */
+
+@media screen and (max-width: 1275px) {
+	.footer-items {
+		width: 50%;
+	}
+}
+
+/* for mobile screen view */
+
+@media screen and (max-width: 660px) {
+	.footer-items {
+		width: 100%;
+	}
 }
