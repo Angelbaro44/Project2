@@ -7,7 +7,7 @@ class Motorcycle extends Component {
             return (
                   <div>
                       <MotorcycleReddit/> 
-                      <YoutubeCycles/>
+                      {/* <YoutubeCycles/> */}
                   </div>
             );
       }
