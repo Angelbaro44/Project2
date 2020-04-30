@@ -66,7 +66,7 @@ class MotorcycleReddit extends Component {
 
       render() {
             // this.displayterms()
-            // console.log(this.state)
+            console.log(this.state)
             return (
 
                  <div className='redditDivGrandpa'>
