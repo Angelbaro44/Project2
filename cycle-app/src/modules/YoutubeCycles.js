@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-const apiKey = 'AIzaSyAMk4iFo_rDA9S1blr_fLkw2Fy6NrWSD1Y';
+const apiKey = 'AIzaSyA_KJP5G6utONipcyue9mzATo0cxXLkDjc';
 const channelID = 'UC1iNF4BnIucCD7J2QGZYkjg';
 const limit = 10;
 
@@ -25,7 +25,8 @@ class YoutubeCycles extends Component {
       posClicked = () => {
             if (this.state.indexCount < 10) {
                   this.setState({ indexCount: this.state.indexCount += 1 });
-                  // this.getYoutubeData()
+                  this.getYoutubeData()
+                  console.log('hello')
 
             }
             console.log(this.state.indexCount);
@@ -34,7 +35,8 @@ class YoutubeCycles extends Component {
       negClicked = () => {
             if (this.state.indexCount > 0) {
                   this.setState({ indexCount: this.state.indexCount -= 1 });
-                  // this.getYoutubeData()
+                  this.getYoutubeData()
+                  console.log('hello')
             }
             console.log(this.state.indexCount);
 
