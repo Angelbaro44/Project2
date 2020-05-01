@@ -50,7 +50,9 @@ class YoutubeCycles extends Component {
                   console.log(res);
                   this.setState({
                         items: res.items,
-                        videoId: res.items[this.state.indexCount].id.videoId
+                        videoId: res.items[this.state.indexCount].id.videoId,
+                        videoTitle: res.items[this.state.indexCount].snippet.title,
+                        videoChannelTitle: res.items[this.state.indexCount].snippet.channelTitle
                   })
 
             })
@@ -62,10 +64,16 @@ class YoutubeCycles extends Component {
 
             console.log(this);
             return (
-                  <div>
-                        <iframe width="560" height="315" src={`https://www.youtube.com/embed/${this.state.videoId}`} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>         
-                        <button onClick={this.negClicked}>   down  </button>
-                        <button onClick={this.posClicked}>  up    </button>
+                  <div className='youtubeDivDaddy'>
+                        <a className='redditHeaderUsername'>"{this.state.videoTitle}" by {this.state.videoChannelTitle} </a>
+                        <br/><br/><br/>
+                        <div className='youtubeDivVideo'><iframe  className='youtubeVideo' width="560" height="315" src={`https://www.youtube.com/embed/${this.state.videoId}`} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                        <br/><br/><br/>
+                        <div className='youtubeDivButtons'>
+                              <button className='youtubeButtons1' onClick={this.negClicked}>  Previous Video  </button>
+                              <button className='youtubeButtons1' onClick={this.posClicked}>  Older Video    </button>
+                        </div>
+                        <br/><br/><br/>
                   </div>
             );
       }

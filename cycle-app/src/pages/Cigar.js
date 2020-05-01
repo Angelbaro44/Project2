@@ -5,7 +5,7 @@ import YoutubeCigars from '../modules/YoutubeCigars';
 class Cigar extends Component {
       render() {
             return (
-                  <div>
+                  <div className='greatDivGrandpa'>
                         <CigarReddit/>
                         <YoutubeCigars/>
                   </div>

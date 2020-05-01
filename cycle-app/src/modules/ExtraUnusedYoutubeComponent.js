@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 
 const apiKey = 'AIzaSyA_KJP5G6utONipcyue9mzATo0cxXLkDjc';
-const channelID = 'UCdHZ38Wxj-diNslUwEOhSDg';
+const channelID = 'UC1iNF4BnIucCD7J2QGZYkjg';
 const limit = 10;
 
 var url = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelID}&part=snippet,id&order=date&maxResults=${limit}`
@@ -50,9 +50,7 @@ class YoutubeCycles extends Component {
                   console.log(res);
                   this.setState({
                         items: res.items,
-                        videoId: res.items[this.state.indexCount].id.videoId,
-                        videoTitle: res.items[this.state.indexCount].snippet.title,
-                        videoChannelTitle: res.items[this.state.indexCount].snippet.channelTitle
+                        videoId: res.items[this.state.indexCount].id.videoId
                   })
 
             })
@@ -65,17 +63,13 @@ class YoutubeCycles extends Component {
             console.log(this);
             return (
                   <div className='youtubeDivDaddy'>
-                        <a className='redditHeaderUsername'>"{this.state.videoTitle}" by {this.state.videoChannelTitle} </a>
-                        <br/><br/><br/>
                         <div className='youtubeDivVideo'><iframe  className='youtubeVideo' width="560" height="315" src={`https://www.youtube.com/embed/${this.state.videoId}`} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-                        <br/><br/><br/>
                         <div className='youtubeDivButtons'>
-                              <button className='youtubeButtons1' onClick={this.negClicked}>  Previous Video  </button>
-                              <button className='youtubeButtons1' onClick={this.posClicked}>  Older Video    </button>
+                              <button className='youtubeButtons' onClick={this.negClicked}>  down  </button>
+                              <button className='youtubeButtons' onClick={this.posClicked}>  up    </button>
                         </div>
-                        <br/><br/><br/>
                   </div>
-            )
+            );
       }
 }
 

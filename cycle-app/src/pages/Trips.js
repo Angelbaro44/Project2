@@ -4,7 +4,7 @@ import YoutubeTrips from '../modules/YoutubeTrips';
 class Trips extends Component {
       render() {
             return (
-                  <div>
+                  <div className='greatDivGrandpa'>
                        <TripsReddit/> 
                        <YoutubeTrips/>
                   </div>
