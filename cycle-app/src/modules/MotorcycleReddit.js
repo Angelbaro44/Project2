@@ -67,6 +67,7 @@ class MotorcycleReddit extends Component {
 
                         return (
 
+                              
                               <MDBCarouselItem itemId={i+1} >
                                     <MDBView>
                                           <img
