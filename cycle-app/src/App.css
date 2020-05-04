@@ -81,6 +81,25 @@ font-size: larger;
 
 
 }
+
+.homeSliderContent1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10%;
+  color: cornsilk;
+  width: 100vw;
+}
+.homeSliderContent2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px;
+  color: cornsilk;
+  background-color: rgba(0, 0, 0, 0.818);
+  width: 100vw;
+}
+
 .homeButtonGroup{
   background: #00121b63; 
   display: flex;

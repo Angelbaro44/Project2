@@ -1,81 +1,94 @@
 import React, { Component } from 'react';
 import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBView, MDBMask, MDBContainer } from
       "mdbreact";
+import { Link, Switch, Route } from 'react-router-dom';
+import Motorcycle from './Motorcycle';
+import Cigar from './Cigar';
+import Trips from './Trips';
 
 class Home extends Component {
       render() {
             return (
+                  <Switch>
 
-                  <div>
-                        <div className='redditDivGrandpa'>
-                              <MDBContainer className='redditContent'>
-                                    <MDBCarousel
-                                          activeItem={1}
-                                          length={3}
-                                          showControls={true}
-                                          showIndicators={true}
-                                          className="z-depth-1"
-                                          className='redditContent'
-                                    >
-                                          <MDBCarouselInner>
-                                                <MDBCarouselItem itemId={1} >
-                                                      <MDBView>
-                                                            <img
-                                                                  className='redditBodyImg'
-                                                                  src=''
-                                                                  alt=''
-                                                            />
+                        <Route exact path='/motorcycles' component={(props) => <Motorcycle {...props} />} />
+                        <Route exact path='/cigars' component={(props) => <Cigar {...props} />} />
+                        <Route exact path='/trips' component={(props) => <Trips {...props} />} />
 
-                                                      </MDBView>
-                                                      <MDBCarouselCaption>
-                                                            <h3 className="h3-responsive"><a href='' className='redditHeaderUsername'></a></h3>
-                                                            <p>hello</p>
-                                                      </MDBCarouselCaption>
-                                                </MDBCarouselItem>
-                                                <MDBCarouselItem itemId={2} >
-                                                      <MDBView>
-                                                            <img
-                                                                  className='redditBodyImg'
-                                                                  src=''
-                                                                  alt=''
-                                                            />
+                        <div>
+                              <div className='redditDivGrandpa'>
+                                    <MDBContainer className='homeSliderContent1'>
+                                          <MDBCarousel
+                                                activeItem={1}
+                                                length={3}
+                                                showControls={true}
+                                                showIndicators={true}
+                                                className="z-depth-1"
+                                                className='homeSliderContent2'
+                                          >
+                                                <MDBCarouselInner>
+                                                      <MDBCarouselItem itemId={2} >
+                                                            <MDBView>
+                                                                  <video
+                                                                        autoPlay muted loop
+                                                                        className='redditBodyImg'
+                                                                        src='/images/cigarVideo.mp4'
+                                                                        alt='vid'
+                                                                  />
 
-                                                      </MDBView>
-                                                      <MDBCarouselCaption>
-                                                            <h3 className="h3-responsive"><a href='' className='redditHeaderUsername'></a></h3>
-                                                            <p>hello</p>
-                                                      </MDBCarouselCaption>
-                                                </MDBCarouselItem>
-                                                <MDBCarouselItem itemId={3} >
-                                                      <MDBView>
-                                                            <img
-                                                                  className='redditBodyImg'
-                                                                  src=''
-                                                                  alt=''
-                                                            />
+                                                            </MDBView>
+                                                            <MDBCarouselCaption>
+                                                                  <h3 className="h3-responsive"><Link className='navLinks' to='/cigars'>Cigar</Link></h3>
+                                                                  <p>hello</p>
+                                                            </MDBCarouselCaption>
+                                                      </MDBCarouselItem>
+                                                      <MDBCarouselItem itemId={1} >
+                                                            <MDBView>
+                                                                  <video
+                                                                        autoPlay muted loop
+                                                                        className='redditBodyImg'
+                                                                        src='/images/cycleVideo.mp4'
+                                                                        alt='vid'
+                                                                  />
 
-                                                      </MDBView>
-                                                      <MDBCarouselCaption>
-                                                            <h3 className="h3-responsive"><a href='' className='redditHeaderUsername'></a></h3>
-                                                            <p>hello</p>
-                                                      </MDBCarouselCaption>
-                                                </MDBCarouselItem>
-                                          </MDBCarouselInner>
-                                    </MDBCarousel>
-                              </MDBContainer>
+                                                            </MDBView>
+                                                            <MDBCarouselCaption>
+                                                                  <h3 className="h3-responsive"><Link className='navLinks' to='/motorcycles'>Motorcyle</Link></h3>
+                                                                  <p>hello</p>
+                                                            </MDBCarouselCaption>
+                                                      </MDBCarouselItem>
+                                                      <MDBCarouselItem itemId={3} >
+                                                            <MDBView>
+                                                                  <video
+                                                                        muted loop autoPlay
+                                                                        className='redditBodyImg'
+                                                                        src='/images/tripVideo.mp4'
+                                                                        alt='vid'
+                                                                  />
 
-                        </div>
+                                                            </MDBView>
+                                                            <MDBCarouselCaption>
+                                                                  <h3 className="h3-responsive"><Link className='navLinks' to='/trips'>Trips</Link></h3>
+                                                                  <p>hello</p>
+                                                            </MDBCarouselCaption>
+                                                      </MDBCarouselItem>
+                                                </MDBCarouselInner>
+                                          </MDBCarousel>
+                                    </MDBContainer>
 
-
-                        <div className='homeButtonGroup'>
-                              <div className='homeButtonGroupOfFirstTwoBottons'>
-                                    <div>   <button className='homeButtonCycle'>  Motorcycles    </button>   </div>
-                                    <div>   <button className='homeButtonCigar'>  Cigars    </button>   </div>
                               </div>
-                              <div>   <button className='homeButtonTrips'>  Trips    </button>   </div>
 
+
+                              <div className='homeButtonGroup'>
+                                    <div className='homeButtonGroupOfFirstTwoBottons'>
+                                          <div>   <button className='homeButtonCycle'><Link className='navLinks' to='/motorcycles'>Motorcyle</Link></button>   </div>
+                                          <div>   <button className='homeButtonCigar'><Link className='navLinks' to='/cigars'>Cigar</Link></button>   </div>
+                                    </div>
+                                    <div>   <button className='homeButtonTrips'><Link className='navLinks' to='/trips'>Trips</Link></button>   </div>
+
+                              </div>
                         </div>
-                  </div>
+                  </Switch>
             );
       }
 }

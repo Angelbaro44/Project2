@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { Link, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
@@ -56,10 +55,10 @@ class App extends React.Component {
                 <h3>Quick Links</h3>
                 <div class="border1"></div>
                 <ul>
-                  <a href="index.html"><li>Home</li></a>
-                  <a href="SpaceShooter.html"><li>Desert Defense</li></a>
-                  <a href="pong.html"><li>Village Protector</li></a>
-                  <a href="rockpaper.html"><li>Pokemon Championship Master</li></a>
+                <Link to='/'><li>Home</li></Link>
+                <Link to='/motorcycles'><li>Motorcyle</li></Link>
+                <Link to='/cigars'><li>Cigar</li></Link>
+                <Link to='/trips'><li>Trips</li></Link>
                 </ul>
               </div>
 
