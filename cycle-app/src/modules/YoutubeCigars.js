@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-const apiKey = 'AIzaSyA_KJP5G6utONipcyue9mzATo0cxXLkDjc';
+const apiKey = 'AIzaSyAMk4iFo_rDA9S1blr_fLkw2Fy6NrWSD1Y';
 const channelID = 'UCdHZ38Wxj-diNslUwEOhSDg';
 const limit = 10;
 

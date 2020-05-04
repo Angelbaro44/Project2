@@ -101,7 +101,9 @@ font-size: larger;
   background-size: cover;
   border-radius: 20%;
   border: 2px solid rgba(0, 139, 139, 0.418);
-
+  font-size: xx-large;
+  color: cornsilk;
+  text-shadow: 2px 2px darkslategrey;
 }
 .homeButtonCigar{
   width: 30vw;
@@ -111,7 +113,9 @@ font-size: larger;
   background-size: cover;
   border-radius: 20%;
   border: 2px solid rgba(0, 139, 139, 0.418);
-
+  font-size: xx-large;
+  color: cornsilk;
+  text-shadow: 2px 2px darkslategrey;
 }
 .homeButtonTrips{
   width: 60vw;
@@ -121,7 +125,9 @@ font-size: larger;
   background-size: cover;
   border-radius: 40px;
   border: 2px solid rgba(0, 139, 139, 0.418);
-
+  font-size: xx-large;
+  color: cornsilk;
+  text-shadow: 2px 2px darkslategrey;
 }
 
 
