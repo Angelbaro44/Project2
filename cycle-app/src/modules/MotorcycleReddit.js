@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBView, MDBMask, MDBContainer } from
+"mdbreact";
 
 class MotorcycleReddit extends Component {
       componentDidMount = () => {
@@ -6,7 +8,7 @@ class MotorcycleReddit extends Component {
 
       }
       state = {
-            res:[]
+            res: []
 
       }
 
@@ -37,45 +39,78 @@ class MotorcycleReddit extends Component {
 
             }).then(res => res.json()).then(res => {
                   console.log(res);
+
+                  let filtteredChildren = res.data.children.filter( each =>  each.data.preview.images[0].source.width > each.data.preview.images[0].source.height)
+                  // console.log(count.data.preview.images[0].source.width)
+                  // console.log(count.data.preview.images[0].source.height)
                   this.setState({
-                        res: res.data.children
-                  
+                        res: filtteredChildren
+
                   })
             })
       }
 
+
+
+
+
+
+
+
+
       displayterms = () => {
             return (
-                  this.state.res.map((count) => {
-                        // console.log(count.data.url)
+                  this.state.res.map((count,i) => {
+                        console.log(count)
+                        console.log(count.data.preview.images[0].source.width + 'w')
+                        console.log(count.data.preview.images[0].source.height + 'L')
+
                         return (
 
-                             <div className='redditContent'>
-                                   <div className='redditHeader'>
-                                         <img className='redditHeaderLogo'src='/images/icon.png' alt='Reddit Logo' />
-                                         <a href='https://www.reddit.com/r/Harley/' className='redditHeaderUsername'>{count.data.author}</a>
-                                         </div>
-                                   <img className='redditBodyImg' src={count.data.url} alt={count.data.author} />
-                                   <p className='redditBodyText'>{count.data.title}</p>
-                             </div>
+                              <MDBCarouselItem itemId={i+1} >
+                                    <MDBView>
+                                          <img
+                                                className='redditBodyImg'
+                                                src={count.data.url}
+                                                alt={count.data.author}
+                                          />
+                                          
+                                    </MDBView>
+                                    <MDBCarouselCaption>
+                                          <h3 className="h3-responsive"><a href='https://www.reddit.com/r/Harley/' className='redditHeaderUsername'>{count.data.author}</a></h3>
+                                          <p>{count.data.title}</p>
+                                    </MDBCarouselCaption>
+                              </MDBCarouselItem>
+
+                              
 
                         )
+                        
                   })
             )
       }
 
       render() {
             // this.displayterms()
-            console.log(this.state)
             return (
 
-                 <div className='redditDivGrandpa'>
-                        <h1 className='redditH1Tittle'>Community's Hotest Posts Today</h1>
-                        <div className='redditDivDaddy'>
-                              {this.displayterms()}
-      
-                        </div>
-                 </div>
+                  <div className='redditDivGrandpa'>
+                        <MDBContainer className='redditContent'>
+                              <MDBCarousel
+                                    activeItem={3}
+                                    length={this.state.res.length}
+                                    showControls={true}
+                                    showIndicators={true}
+                                    className="z-depth-1"
+                                    className='redditContent'
+                              >
+                                    <MDBCarouselInner>
+                                          {this.displayterms()}
+                                    </MDBCarouselInner>
+                              </MDBCarousel>
+                        </MDBContainer>
+ 
+                  </div>
             );
       }
 }

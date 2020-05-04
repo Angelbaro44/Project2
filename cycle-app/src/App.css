@@ -8,7 +8,9 @@ html{
   background-repeat: no-repeat;
   /* background-position: contain; */
 }
-
+.body{
+  background-color: transparent;
+}
 
 
 
@@ -175,7 +177,6 @@ color: cornsilk;
   margin: 20px;
   margin-top: 10%;
   color: cornsilk;
-
   background-color: rgba(0, 0, 0, 0.418);
 }
 .redditHeader{
@@ -201,8 +202,8 @@ width: 80px;
 
 }
 .redditBodyImg{
-width: 900px;
-padding: 10px;
+height: 70vh;
+
 }
 .redditBodyText{
 padding: 10px;
