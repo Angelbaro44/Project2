@@ -61,9 +61,9 @@ class MotorcycleReddit extends Component {
       displayterms = () => {
             return (
                   this.state.res.map((count,i) => {
-                        console.log(count)
-                        console.log(count.data.preview.images[0].source.width + 'w')
-                        console.log(count.data.preview.images[0].source.height + 'L')
+                        // console.log(count)
+                        // console.log(count.data.preview.images[0].source.width + 'w')
+                        // console.log(count.data.preview.images[0].source.height + 'L')
 
                         return (
 
