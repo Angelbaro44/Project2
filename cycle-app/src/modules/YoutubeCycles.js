@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-const apiKey = 'AIzaSyAMk4iFo_rDA9S1blr_fLkw2Fy6NrWSD1Y';
+const apiKey = 'AIzaSyDAZ7m4sq_MpunyQMuWRgiZVi-mao5pmsM';
 const channelID = 'UC1iNF4BnIucCD7J2QGZYkjg';
 const limit = 10;
 
@@ -48,6 +48,7 @@ class YoutubeCycles extends Component {
 
             fetch(url).then(res => res.json()).then(res => {
                   console.log(res);
+                  if(res.items)
                   this.setState({
                         items: res.items,
                         videoId: res.items[this.state.indexCount].id.videoId,

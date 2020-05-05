@@ -48,6 +48,7 @@ class YoutubeCycles extends Component {
 
             fetch(url).then(res => res.json()).then(res => {
                   console.log(res);
+                  if(res.items)
                   this.setState({
                         items: res.items,
                         videoId: res.items[this.state.indexCount].id.videoId,
