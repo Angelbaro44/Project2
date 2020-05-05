@@ -70,9 +70,9 @@ class YoutubeCycles extends Component {
                  <div><a className='redditHeaderUsername'>"{this.state.videoTitle}" by {this.state.videoChannelTitle} </a></div>
                  <br/><br/>
                  <div className='youtubeDivSon'>
-                       <button className='youtubeButtonsLeft' onClick={this.negClicked}> Newer Video  </button>
-                       <div className='youtubeDivVideo'><iframe  className='youtubeVideo' width="560" height="315" src={`https://www.youtube.com/embed/${this.state.videoId}`} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-                       <button className='youtubeButtonsRight' onClick={this.posClicked}>  Older   Video    </button>
+                 <button className='youtubeButtonsLeft' onClick={this.negClicked}> <p className='verticalText'>Newer Video</p>  </button>
+                              <div className='youtubeDivVideo'><iframe  className='youtubeVideo' width="560" height="315" src={`https://www.youtube.com/embed/${this.state.videoId}`} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                              <button className='youtubeButtonsRight' onClick={this.posClicked}>  <p className='verticalText'>Older   Video</p>    </button>
                  </div>
                  <br/><br/><br/>
            </div>
