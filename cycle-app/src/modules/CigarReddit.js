@@ -32,7 +32,6 @@ class CigarReddit extends Component {
                   method: "POST"
             })
             let key = await res.json()
-            // console.log(key)
             return key.access_token
 
       }
@@ -42,38 +41,52 @@ class CigarReddit extends Component {
 
             //let key = await this.getAssesAToken();
             //console.log(key)
-            fetch("https://oauth.reddit.com/r/cigars/top?limit=5", {
+            fetch("https://oauth.reddit.com/r/cigars/top?t=month&limit=30", {
                   headers: { Authorization: `bearer ${await this.getAssesAToken()}` }
 
             }).then(res => res.json()).then(res => {
                   console.log(res);
+
+                  let filtteredChildren = res.data.children.filter( each =>  each.data.preview?.images[0].source.width > each.data.preview?.images[0].source.height)
+                  // console.log(count.data.preview.images[0].source.width)
+                  // console.log(count.data.preview.images[0].source.height)
                   this.setState({
-                        res: res.data.children
+                        res: filtteredChildren
 
                   })
             })
-
       }
+
+
+
+
+
+
+
+
 
       displayterms = () => {
             return (
                   this.state.res.map((count,i) => {
-                        console.log(count)
+                        // console.log(count)
+                        // console.log(count.data.preview.images[0].source.width + 'w')
+                        // console.log(count.data.preview.images[0].source.height + 'L')
 
                         return (
 
-                              <MDBCarouselItem itemId={i+1} className='redditContent'>
+                              
+                              <MDBCarouselItem itemId={i+1} >
                                     <MDBView>
                                           <img
                                                 className='redditBodyImg'
                                                 src={count.data.url}
                                                 alt={count.data.author}
                                           />
-                                          <MDBMask overlay="black-light" />
+                                          
                                     </MDBView>
-                                    <MDBCarouselCaption>
+                                    <MDBCarouselCaption >
                                           <h3 className="h3-responsive"><a href='https://www.reddit.com/r/Harley/' className='redditHeaderUsername'>{count.data.author}</a></h3>
-                                          <p>{count.data.title}</p>
+                                          <p className='text2'>{count.data.title}</p>
                                     </MDBCarouselCaption>
                               </MDBCarouselItem>
 
@@ -87,17 +100,17 @@ class CigarReddit extends Component {
 
       render() {
             // this.displayterms()
-            console.log(this)
             return (
 
                   <div className='redditDivGrandpa'>
-                        <MDBContainer className='redditContent'>
+                        <MDBContainer className='homeSliderContent1'>
                               <MDBCarousel
                                     activeItem={3}
                                     length={this.state.res.length}
                                     showControls={true}
                                     showIndicators={true}
                                     className="z-depth-1"
+                                    className='homeSliderContent2'
                               >
                                     <MDBCarouselInner>
                                           {this.displayterms()}
@@ -109,6 +122,5 @@ class CigarReddit extends Component {
             );
       }
 }
-
 
 export default CigarReddit;

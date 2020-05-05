@@ -34,7 +34,7 @@ class MotorcycleReddit extends Component {
 
             //let key = await this.getAssesAToken();
             //console.log(key)
-            fetch("https://oauth.reddit.com/r/Harley/top?limit=5", {
+            fetch("https://oauth.reddit.com/r/Harley/top?limit=20", {
                   headers: { Authorization: `bearer ${await this.getAssesAToken()}` }
 
             }).then(res => res.json()).then(res => {
@@ -79,7 +79,7 @@ class MotorcycleReddit extends Component {
                                     </MDBView>
                                     <MDBCarouselCaption>
                                           <h3 className="h3-responsive"><a href='https://www.reddit.com/r/Harley/' className='redditHeaderUsername'>{count.data.author}</a></h3>
-                                          <p>{count.data.title}</p>
+                                          <p className='text2'>{count.data.title}</p>
                                     </MDBCarouselCaption>
                               </MDBCarouselItem>
 
@@ -96,14 +96,14 @@ class MotorcycleReddit extends Component {
             return (
 
                   <div className='redditDivGrandpa'>
-                        <MDBContainer className='redditContent'>
+                        <MDBContainer className='homeSliderContent1'>
                               <MDBCarousel
                                     activeItem={3}
                                     length={this.state.res.length}
                                     showControls={true}
                                     showIndicators={true}
                                     className="z-depth-1"
-                                    className='redditContent'
+                                    className='homeSliderContent2'
                               >
                                     <MDBCarouselInner>
                                           {this.displayterms()}
