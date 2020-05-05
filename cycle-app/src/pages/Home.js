@@ -39,7 +39,7 @@ class Home extends Component {
                                                             </MDBView>
                                                             <MDBCarouselCaption>
                                                                   <h3 className="h3-responsive"><Link className='navLinks' to='/cigars'>Cigar</Link></h3>
-                                                                  <p>hello</p>
+                                                                  <p>Explore some great cigar posts and expand your knowledge on cigars.</p>
                                                             </MDBCarouselCaption>
                                                       </MDBCarouselItem>
                                                       <MDBCarouselItem itemId={1} >
@@ -54,7 +54,7 @@ class Home extends Component {
                                                             </MDBView>
                                                             <MDBCarouselCaption>
                                                                   <h3 className="h3-responsive"><Link className='navLinks' to='/motorcycles'>Motorcyle</Link></h3>
-                                                                  <p>hello</p>
+                                                                  <p>Explore some great Motorcycle posts and expand your knowledge on motorcycle safty.</p>
                                                             </MDBCarouselCaption>
                                                       </MDBCarouselItem>
                                                       <MDBCarouselItem itemId={3} >
@@ -69,7 +69,7 @@ class Home extends Component {
                                                             </MDBView>
                                                             <MDBCarouselCaption>
                                                                   <h3 className="h3-responsive"><Link className='navLinks' to='/trips'>Trips</Link></h3>
-                                                                  <p>hello</p>
+                                                                  <p>Explore some great motorcycle roadtrip posts and expand your knowledge on motorcycle camping.</p>
                                                             </MDBCarouselCaption>
                                                       </MDBCarouselItem>
                                                 </MDBCarouselInner>

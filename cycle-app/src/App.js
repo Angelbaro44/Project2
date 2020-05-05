@@ -50,8 +50,8 @@ class App extends React.Component {
                 <Link className='navLinks' to='/'>Home</Link>
               </section>
               <section className='navSectionThreeLinks'>
-                <Link className='navLinks' to='/motorcycles'>Motorcyle</Link>
-                <Link className='navLinks' to='/cigars'>Cigar</Link>
+                <Link className='navLinks' to='/motorcycles'>Motorcyles</Link>
+                <Link className='navLinks' to='/cigars'>Cigars</Link>
                 <Link className='navLinks' to='/trips'>Trips</Link>
               </section>
 
@@ -97,8 +97,8 @@ class App extends React.Component {
                 <div class="border1"></div>
                 <ul>
                 <Link to='/'><li>Home</li></Link>
-                <Link to='/motorcycles'><li>Motorcyle</li></Link>
-                <Link to='/cigars'><li>Cigar</li></Link>
+                <Link to='/motorcycles'><li>Motorcyles</li></Link>
+                <Link to='/cigars'><li>Cigars</li></Link>
                 <Link to='/trips'><li>Trips</li></Link>
                 </ul>
               </div>
@@ -115,7 +115,7 @@ class App extends React.Component {
               </div>
 
               <div class="footer-items">
-                <h3>Contact us</h3>
+                <h3>Contact Me</h3>
                 <div class="border1"></div>
                 <ul>
                   <li><i class="fa fa-map-marker" aria-hidden="true"></i>Miami, Florida</li>
