@@ -85,7 +85,7 @@ class CigarReddit extends Component {
                                           
                                     </MDBView>
                                     <MDBCarouselCaption >
-                                          <h3 className="h3-responsive"><a href='https://www.reddit.com/r/Harley/' className='redditHeaderUsername'>{count.data.author}</a></h3>
+                                          <h3 className="h3-responsive"><a href={`https://www.reddit.com${count.data.permalink}`} className='redditHeaderUsername'>{count.data.author}</a></h3>
                                           <p className='text2'>{count.data.title}</p>
                                     </MDBCarouselCaption>
                               </MDBCarouselItem>

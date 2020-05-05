@@ -61,7 +61,7 @@ html{
   color: white;
   text-decoration:none;
   border-radius: 3px;
-  border: 1px solid rgba(0, 139, 139, 0.418);
+  /* border: 1px solid rgba(0, 139, 139, 0.418); */
   /* background: rgba(41, 0, 102, 0.664); */
   margin-left: 15px;
   margin-right: 15px;
@@ -396,6 +396,11 @@ width:850px;
   border: 10px groove  #00121be5;
 
 }
+.youtubeDivSon{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 .youtubeDivVideo{
   width: 80%;
   height: 90%;
@@ -404,20 +409,25 @@ width:850px;
   align-items: center;
 }
 .youtubeVideo{
-  width: 100%;
+  width: 70vw;
+  height: 35vw;
+}
+.youtubeButtonsLeft{
+  background: url('/images/left.gif');
+  background-size: 100%;
+  width:100%;
   height: 100%;
+  border: none;
+  color: white;
+
 }
-.youtubeDivButtons{
-  width: 80%;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-}
-.youtubeButtons1{
-background: url(/images/download.gif);
+.youtubeButtonsRight{
+background: url('/images/right.gif');
 background-size: 100%;
 width:100%;
-height: 60px;
+height: 100%;
+border: none;
+color: white;
 }
 
  

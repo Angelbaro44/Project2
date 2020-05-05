@@ -85,7 +85,7 @@ class Home extends Component {
                                                 <img className='homeButtonCigar' src="/images/cycles.jpg" alt="Avatar" class="image"/>
                                                       <div class="overlay">
                                                             <div class="text">
-                                                                  <h3>Motorcycles</h3>
+                                                                  <h3><Link className='navLinks' to='/motorcycles'>Motorcycles</Link></h3>
                                                                   <img className='buttonIcons' src='/images/cycle-icon.png' alt=''/>
                                                                   <p>Motorcycles are cool. Period. They tell the world, “I live my life large! 
                                                                         I laugh at fear, I am adventurous!” Everyone who sees anyone on any 
@@ -100,7 +100,7 @@ class Home extends Component {
                                                       <img className='homeButtonCigar' src="/images/cigars.jpg" alt="Avatar" class="image"/>
                                                             <div class="overlay">
                                                             <div class="text">
-                                                                  <h3>Cigars</h3>
+                                                                  <h3><Link className='navLinks' to='/cigars'>Cigar</Link></h3>
                                                                   <img className='buttonIcons' src='/images/cigar-icon.png' alt=''/>
                                                                   <p>Cigars represent exquisite craftsmanship. Premium cigars are hand-rolled,
                                                                          in spite of the advent of modern machinery. With cigars you have a 
@@ -115,7 +115,7 @@ class Home extends Component {
                                                       <img src="/images/trips.jpg" alt="Avatar" class="image2"/>
                                                             <div class="overlay">
                                                             <div class="text">
-                                                                  <h3>Travel</h3>
+                                                                  <h3><Link className='navLinks' to='/Trips'>Travel</Link></h3>
                                                                   <img className='buttonIcons' src='/images/trip-icon.png' alt=''/>
                                                                   <p>
                                                                         No matter where you venture or how far you ride, 
