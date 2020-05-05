@@ -15,7 +15,7 @@ class Home extends Component {
                         <Route exact path='/cigars' component={(props) => <Cigar {...props} />} />
                         <Route exact path='/trips' component={(props) => <Trips {...props} />} />
 
-                        <div>
+                        <div className='redditGreatDivGrandpa'>
                               <div className='redditDivGrandpa'>
                                     <MDBContainer className='homeSliderContent1'>
                                           <MDBCarousel
@@ -84,21 +84,51 @@ class Home extends Component {
                                           <div class="container1">
                                                 <img className='homeButtonCigar' src="/images/cycles.jpg" alt="Avatar" class="image"/>
                                                       <div class="overlay">
-                                                            <div class="text">Hello World</div>
+                                                            <div class="text">
+                                                                  <h3>Motorcycles</h3>
+                                                                  <img className='buttonIcons' src='/images/cycle-icon.png' alt=''/>
+                                                                  <p>Motorcycles are cool. Period. They tell the world, “I live my life large! 
+                                                                        I laugh at fear, I am adventurous!” Everyone who sees anyone on any 
+                                                                        bike thinks that person is cool. This is very true for kids, and slightly 
+                                                                        less true for in-laws—but even they are still secretly impressed.
+
+                                                                        Unless you ride in sandals or flip flops, or without a helmet – then you look silly.</p>
+                                                                  </div>
                                                       </div>
                                                       </div>
                                                 <div class="container1">
                                                       <img className='homeButtonCigar' src="/images/cigars.jpg" alt="Avatar" class="image"/>
                                                             <div class="overlay">
-                                                                  <div class="text">Hello World</div>
-                                                            </div>
+                                                            <div class="text">
+                                                                  <h3>Cigars</h3>
+                                                                  <img className='buttonIcons' src='/images/cigar-icon.png' alt=''/>
+                                                                  <p>Cigars represent exquisite craftsmanship. Premium cigars are hand-rolled,
+                                                                         in spite of the advent of modern machinery. With cigars you have a 
+                                                                         chance to escape from the world of mass-produced industry and enjoy
+                                                                          a personal touch.</p>
+                                                                  </div>                                                            </div>
                                                                                     </div>
                                                 </div>
-                                                <div class="container1">
+                                                <br/>
+                                                <br/>
+                                                <div class="container2">
                                                       <img src="/images/trips.jpg" alt="Avatar" class="image2"/>
                                                             <div class="overlay">
-                                                                  <div class="text">Hello World</div>
-                                                            </div>
+                                                            <div class="text">
+                                                                  <h3>Travel</h3>
+                                                                  <img className='buttonIcons' src='/images/trip-icon.png' alt=''/>
+                                                                  <p>
+                                                                        No matter where you venture or how far you ride, 
+                                                                        when you’re on your motorcycle, you never feel like 
+                                                                        you’re commuting. You feel like you’re traveling. 
+                                                                        Motorcycling is 
+                                                                        never about getting from A to B. Even if you’re going 
+                                                                        on a long weekend ride, you get the sense that you’re 
+                                                                        exploring, venturing out into the world, and discovering 
+                                                                        new things. And when you travel to another state or country,
+                                                                         you’re taking things to a whole new level.
+                                                                         </p>
+                                                                  </div>                                                            </div>
                                                                                     </div>
 
                                                 </div>
