@@ -81,13 +81,28 @@ class Home extends Component {
 
                               <div className='homeButtonGroup'>
                                     <div className='homeButtonGroupOfFirstTwoBottons'>
-                                          <div>   <button className='homeButtonCycle'><Link className='navLinks' to='/motorcycles'>Motorcyle</Link></button>   </div>
-                                          <div>   <button className='homeButtonCigar'><Link className='navLinks' to='/cigars'>Cigar</Link></button>   </div>
-                                    </div>
-                                    <div>   <button className='homeButtonTrips'><Link className='navLinks' to='/trips'>Trips</Link></button>   </div>
+                                          <div class="container1">
+                                                <img className='homeButtonCigar' src="/images/cycles.jpg" alt="Avatar" class="image"/>
+                                                      <div class="overlay">
+                                                            <div class="text">Hello World</div>
+                                                      </div>
+                                                      </div>
+                                                <div class="container1">
+                                                      <img className='homeButtonCigar' src="/images/cigars.jpg" alt="Avatar" class="image"/>
+                                                            <div class="overlay">
+                                                                  <div class="text">Hello World</div>
+                                                            </div>
+                                                                                    </div>
+                                                </div>
+                                                <div class="container1">
+                                                      <img src="/images/trips.jpg" alt="Avatar" class="image2"/>
+                                                            <div class="overlay">
+                                                                  <div class="text">Hello World</div>
+                                                            </div>
+                                                                                    </div>
 
-                              </div>
-                        </div>
+                                                </div>
+                                          </div>
                   </Switch>
             );
       }

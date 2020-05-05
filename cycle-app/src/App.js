@@ -6,17 +6,46 @@ import Motorcycle from './pages/Motorcycle';
 import Cigar from './pages/Cigar';
 import Trips from './pages/Trips';
 
+
 class App extends React.Component {
 
+  // componentDidMount = () =>{
+  //   this.timer()
+  // }
+
+state={
+  isTrue: true
+
+}
+
+  timer = () => {
+    this.intervalID = setInterval(this.myTimer, 3000)
+  }
+
+  myTimer = () => {
+    // console.log(this.state)
+
+
+    if(this.state.isTrue = true){
+    this.setState({id: 'magicBackgroundTransition2'})
+  }
+    if(this.state.isTrue = false){
+      this.setState({id: ''}) 
+    }
+      this.setState({
+        isTrue:!this.state.isTrue
+      })
+
+  }
 
     render() {
 
-
+// console.log(this)
       return (
-        <>
+        
+        <div id={this.timer} className='magicBackgroundTransition'>
           <header className='navHeader'>
             <nav className='nav'>
-
               <section className='navSectionHome'>
                 <Link className='navLinks' to='/'>Home</Link>
               </section>
@@ -30,6 +59,11 @@ class App extends React.Component {
             </nav>
           </header>
 
+
+
+
+
+
           {/* <div>   <button>  M <img src='' alt='' />   </button>   </div> */}
           <div className='daddyDiv'>
 
@@ -42,6 +76,13 @@ class App extends React.Component {
 
           </div>
           <div></div>
+
+
+
+
+
+
+
 
           <footer><div class="footer">
             <div class="inner-footer">
@@ -94,7 +135,7 @@ class App extends React.Component {
               Copyright &copy; Angel Baro 2020.
     </div>
           </div></footer>
-        </>
+        </div>
 
 
 
