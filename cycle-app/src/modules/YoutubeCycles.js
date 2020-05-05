@@ -66,16 +66,16 @@ class YoutubeCycles extends Component {
             console.log(this);
             return (
                   <div className='youtubeDivDaddy'>
-                        <a className='redditHeaderUsername'>"{this.state.videoTitle}" by {this.state.videoChannelTitle} </a>
-                        <br/><br/><br/>
-                        <div className='youtubeDivVideo'><iframe  className='youtubeVideo' width="560" height="315" src={`https://www.youtube.com/embed/${this.state.videoId}`} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-                        <br/><br/><br/>
-                        <div className='youtubeDivButtons'>
-                              <button className='youtubeButtons1' onClick={this.negClicked}>  Previous Video  </button>
-                              <button className='youtubeButtons1' onClick={this.posClicked}>  Older Video    </button>
-                        </div>
-                        <br/><br/><br/>
-                  </div>
+                  <br/><br/>
+                 <div><a className='redditHeaderUsername'>"{this.state.videoTitle}" by {this.state.videoChannelTitle} </a></div>
+                 <br/><br/>
+                 <div className='youtubeDivSon'>
+                       <button className='youtubeButtonsLeft' onClick={this.negClicked}> Newer Video  </button>
+                       <div className='youtubeDivVideo'><iframe  className='youtubeVideo' width="560" height="315" src={`https://www.youtube.com/embed/${this.state.videoId}`} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                       <button className='youtubeButtonsRight' onClick={this.posClicked}>  Older   Video    </button>
+                 </div>
+                 <br/><br/><br/>
+           </div>
             );
       }
 }

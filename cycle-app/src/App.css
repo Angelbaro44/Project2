@@ -386,7 +386,7 @@ width:850px;
 /* Youtube Component Styles */
 .youtubeDivDaddy{
   width: 100vw;
-  height: 70vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -419,7 +419,7 @@ width:850px;
   height: 100%;
   border: none;
   color: white;
-
+background-repeat: round;
 }
 .youtubeButtonsRight{
 background: url('/images/right.gif');
@@ -428,6 +428,22 @@ width:100%;
 height: 100%;
 border: none;
 color: white;
+background-repeat: round;
+
+}
+.verticalText {
+  font-size: 25px;
+  word-break: break-word;
+  width: 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
 }
 
  
