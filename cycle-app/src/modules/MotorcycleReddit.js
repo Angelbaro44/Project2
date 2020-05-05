@@ -34,13 +34,13 @@ class MotorcycleReddit extends Component {
 
             //let key = await this.getAssesAToken();
             //console.log(key)
-            fetch("https://oauth.reddit.com/r/Harley/top?limit=20", {
+            fetch("https://oauth.reddit.com/r/Harley/top?t=month&limit=20", {
                   headers: { Authorization: `bearer ${await this.getAssesAToken()}` }
 
             }).then(res => res.json()).then(res => {
                   console.log(res);
 
-                  let filtteredChildren = res.data.children.filter( each =>  each.data.preview.images[0].source.width > each.data.preview.images[0].source.height)
+                  let filtteredChildren = res.data.children.filter( each =>  each.data.preview?.images[0].source.width > each.data.preview?.images[0].source.height)
                   // console.log(count.data.preview.images[0].source.width)
                   // console.log(count.data.preview.images[0].source.height)
                   this.setState({
