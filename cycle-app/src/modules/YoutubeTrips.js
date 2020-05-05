@@ -66,12 +66,11 @@ class YoutubeCycles extends Component {
             console.log(this);
             return (
                   <div className='youtubeDivDaddy'>
-                        <a className='redditHeaderUsername'>"{this.state.videoTitle}" by {this.state.videoChannelTitle} </a>
+                        <div><a className='redditHeaderUsername'>"{this.state.videoTitle}" by {this.state.videoChannelTitle} </a></div>
                         <br/><br/><br/>
-                        <div className='youtubeDivVideo'><iframe  className='youtubeVideo' width="560" height="315" src={`https://www.youtube.com/embed/${this.state.videoId}`} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-                        <br/><br/><br/>
-                        <div className='youtubeDivButtons'>
+                        <div>
                               <button className='youtubeButtons1' onClick={this.negClicked}>  Previous Video  </button>
+                              <div className='youtubeDivVideo'><iframe  className='youtubeVideo' width="560" height="315" src={`https://www.youtube.com/embed/${this.state.videoId}`} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
                               <button className='youtubeButtons1' onClick={this.posClicked}>  Older Video    </button>
                         </div>
                         <br/><br/><br/>
