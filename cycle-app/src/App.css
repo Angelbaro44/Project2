@@ -357,12 +357,12 @@ color: cornsilk;
 width: 80px;
 
 }
-.redditHeaderUsername{
+#redditHeaderUsername{
   border: outset;
 	background: #00121be5;
   padding: 10px;
   color: cornsilk;
-  text-decoration: none;
+  text-decoration: cornsilk;
 
 }
 .redditBodyImg{

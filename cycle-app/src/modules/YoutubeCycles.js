@@ -67,7 +67,7 @@ class YoutubeCycles extends Component {
             return (
                   <div className='youtubeDivDaddy'>
                   <br/><br/>
-                 <div><a className='redditHeaderUsername'>"{this.state.videoTitle}" by {this.state.videoChannelTitle} </a></div>
+                 <div><a id='redditHeaderUsername'>"{this.state.videoTitle}" by {this.state.videoChannelTitle} </a></div>
                  <br/><br/>
                  <div className='youtubeDivSon'>
                  <button className='youtubeButtonsLeft' onClick={this.negClicked}> <p className='verticalText'>Newer Video</p>  </button>
