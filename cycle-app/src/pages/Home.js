@@ -38,7 +38,7 @@ class Home extends Component {
 
                                                             </MDBView>
                                                             <MDBCarouselCaption>
-                                                                  <h3 className="h3-responsive"><Link className='navLinks' to='/cigars'>Cigar</Link></h3>
+                                                                  <h3 className="h3-responsive"><Link className='navLinks' to='/cigars'>Cigars</Link></h3>
                                                                   <p>Explore some great cigar posts and expand your knowledge on cigars.</p>
                                                             </MDBCarouselCaption>
                                                       </MDBCarouselItem>
@@ -53,8 +53,8 @@ class Home extends Component {
 
                                                             </MDBView>
                                                             <MDBCarouselCaption>
-                                                                  <h3 className="h3-responsive"><Link className='navLinks' to='/motorcycles'>Motorcyle</Link></h3>
-                                                                  <p>Explore some great Motorcycle posts and expand your knowledge on motorcycle safty.</p>
+                                                                  <h3 className="h3-responsive"><Link className='navLinks' to='/motorcycles'>Motorcyles</Link></h3>
+                                                                  <p>Explore some great Motorcycle posts and expand your knowledge on motorcycle safety.</p>
                                                             </MDBCarouselCaption>
                                                       </MDBCarouselItem>
                                                       <MDBCarouselItem itemId={3} >
