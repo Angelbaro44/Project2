@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
 
-const apiKey = 'AIzaSyAMk4iFo_rDA9S1blr_fLkw2Fy6NrWSD1Y';
+const apiKey = 'AIzaSyDAZ7m4sq_MpunyQMuWRgiZVi-mao5pmsM';
 const channelID = 'UCdHZ38Wxj-diNslUwEOhSDg';
-const limit = 10;
+const limit = 12;
 
 var url = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelID}&part=snippet,id&order=date&maxResults=${limit}`
 
@@ -19,11 +19,11 @@ class YoutubeCycles extends Component {
       }
       state = {
             items: [],
-            indexCount: 0
+            indexCount: 5
       }
 
       posClicked = () => {
-            if (this.state.indexCount < 10) {
+            if (this.state.indexCount < 12) {
                   this.setState({ indexCount: this.state.indexCount += 1 });
                   this.getYoutubeData()
                   console.log('hello')
@@ -48,7 +48,7 @@ class YoutubeCycles extends Component {
 
             fetch(url).then(res => res.json()).then(res => {
                   console.log(res);
-                  
+                  if(res.items)
                   this.setState({
                         items: res.items,
                         videoId: res.items[this.state.indexCount].id.videoId,

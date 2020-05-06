@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 const apiKey = 'AIzaSyDAZ7m4sq_MpunyQMuWRgiZVi-mao5pmsM';
 const channelID = 'UC1iNF4BnIucCD7J2QGZYkjg';
-const limit = 10;
+const limit = 12;
 
 var url = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelID}&part=snippet,id&order=date&maxResults=${limit}`
 
@@ -19,11 +19,11 @@ class YoutubeCycles extends Component {
       }
       state = {
             items: [],
-            indexCount: 0
+            indexCount: 5
       }
 
       posClicked = () => {
-            if (this.state.indexCount < 10) {
+            if (this.state.indexCount < 12) {
                   this.setState({ indexCount: this.state.indexCount += 1 });
                   this.getYoutubeData()
                   console.log('hello')

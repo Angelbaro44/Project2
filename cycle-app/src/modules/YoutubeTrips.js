@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-const apiKey = 'AIzaSyAMk4iFo_rDA9S1blr_fLkw2Fy6NrWSD1Y';
+const apiKey = 'AIzaSyDAZ7m4sq_MpunyQMuWRgiZVi-mao5pmsM';
 const channelID = 'UCyhwir3fmk5NR4n_GWsa1EQ';
 const limit = 12;
 
@@ -23,7 +23,7 @@ class YoutubeCycles extends Component {
       }
 
       posClicked = () => {
-            if (this.state.indexCount <= 10) {
+            if (this.state.indexCount < 12) {
                   this.setState({ indexCount: this.state.indexCount += 1 });
                   this.getYoutubeData()
                   console.log('hello')
